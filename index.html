@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Jardin D'Eugène</title>
+    
+    <link rel="stylesheet" href="css/index.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="plug-in/slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="plug-in/slick-1.8.1/slick/slick-theme.css"/>
+    
+    <script src="https://kit.fontawesome.com/3c56072dd7.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header id="header">
+        <div class="container-fluid text-white" style="background-color: #48AE00FF;" id="top">
+            <div class="row">
+                <div class="col-lg-4 offset-lg-2">
+                    Votre grainetier en ligne !
+                </div>
+                <div class="col-lg-4 text-end">
+                    Mon compte
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12" id="logo">
+                    <img src="img/logo-jardin-297x271.png" alt="logo-le-jardin-d-eugene" class="img-fluid" width="180" height="164">
+                </div>
+                <nav class="col-lg-5 navbar-light border-top border-end border-2 nav-height " >
+                    <div class="container-fluid text-end">
+                        <a class="navbar-brand" href="#">Graines Potagères</a>
+                    </div>
+                </nav>
+                <nav class="col-lg-2  navbar-light border-top border-2 nav-height">
+                    <div class="container-fluid text-center">
+                        <a class="navbar-brand" href="#">Graines Fleurs</a>
+                    </div>
+                </nav>
+                <nav class="col-lg-5 navbar-light border-top border-start border-2 nav-height">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">Graines Aromatiques et médicinales</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div id="tampon"></div>
+        <div class="row">
+            <div class="single-item" id="slider">
+                <img src="img/carroussel1.png" alt="photo-graines-potageres" class="img-fluid rounded mx-auto" id="imgCaroussel">
+                <img src="img/carroussel2.png" alt="photo-graines-fleurs" class="img-fluid rounded mx-auto" id="imgCaroussel">
+                <img src="img/carroussel3.png" alt="photo-graines-aromatiques" class="img-fluid rounded mx-auto" id="imgCaroussel">
+                </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row  mt-4" id="phares">
+            <div class="col-4">
+                <p class="prod">Produits phares</p>
+            </div>
+            <div class="col-8 trait">
+            </div>
+        </div>
+        <div class="row panier">
+            <img src="img/image-paniers.png" alt="produits">
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="bandeau">
+            <p>Accueil / <span id="orange">Contactez-nous</span></p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mt-5 mb-5">
+            <div class="col-lg-3">
+                <h3>Informations</h3>
+                <div id="adresse">
+                    <i class="fas fa-map-marker-alt fas-heigth"></i>
+                    <div>
+                        Le jardin d'Eugene <br>
+                        8 rue du Luxembourg <br>
+                        L-5752 Frisange <br>
+                        Luxembourg
+                    </div>
+                </div>
+                <div id="telephone">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        Appelez-nous: <br>
+                        +352 26 36 29 84
+                    </div>
+                </div>
+                <div id="email">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        Envoyez-nous un e-mail: <br>
+                        contact@lejardindeugene.com
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div id="contact">
+                    <div class="row">
+                        <h3 class="col-lg-12">Contactez-nous</h3>
+                    </div>
+                    <div class="row formStyle">
+                        <div class="col-lg-3 text-end">
+                            <label for="sujet">Sujet</label>
+                        </div>
+                        <div class="col-lg-5">
+                            <select id="sujet" name="sujet" class="form-select" onblur="verifSujet()">
+                                
+                            </select>
+                        </div>
+                        <div class="col-lg-4" id="errorSujet">
+                            * champ obligatoire
+                        </div>
+                    </div>
+                    <div class="row formStyle">
+                        <div class="col-lg-3 text-end">
+                            <label for="mail">Adresse e-mail</label>
+                        </div>
+                        <div class="col-lg-5">
+                            <input id="mail" type="text" placeholder="votre@email.com" class="form-control" onblur="verifMail()">
+                        </div>
+                        <div class="col-lg-4" id="errorMail">
+                            * champ obligatoire
+                        </div>
+                    </div>
+                    <div class="row formStyle">
+                        <div class="col-lg-3 text-end">
+                            <label for="doc">Document joint</label>
+                        </div>
+                        <div class="col-lg-5">
+                            <input class="form-control" type="file" id="doc">
+                        </div>
+                        <div class="col-lg-4">
+                            * optionnel
+                        </div>
+                    </div>
+                    <div class="row formStyle">
+                        <div class="col-lg-3 text-end">
+                            <label for="area">Message</label>
+                        </div>
+                        <div class="col-lg-5">
+                            <textarea class="form-control" name="area" id="area" rows="3" placeholder="Comment pouvons-nous aider ?" onblur="verifMessage()" ></textarea>
+                        </div>
+                        <div class="col-lg-4" id="errorMessage">
+                            * champ obligatoire
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-end">
+                            <button type="button" class="btn btn-dark btn-lg">Envoyer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <a id="return" href="#" onclick="haut()"><i class="far fa-arrow-alt-circle-up"></i></a>
+    </div>
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="plug-in/slick-1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.single-item').slick(
+                {   
+                    dots:true
+                }
+            );
+        });
+
+
+
+
+
+
+        textSujet()
+        function textSujet()
+        {
+            var text = '';
+            var tab = ['', 'Service client', 'Service technique', 'Service web', 'Service SAV'];
+
+            for (i of tab)
+            {
+                text += '<option value="'+i+'">' + i + '</option>';
+            }
+            
+            $('#sujet').html(text);
+        }
+
+
+
+        function verifSujet()
+        {
+            var sujet = $('#sujet').val();
+
+            if (sujet =='')
+            {
+                $('#errorSujet').show();
+                $('#errorSujet').addClass('error');
+            }
+            else
+            {
+                $('#errorSujet').hide();
+            }
+        }
+
+
+        function verifMail()
+        {
+            var mail = $('#mail').val();
+            var regex = new RegExp("^[\\w.-]+@[A-Za-z0-9.-]+.[a-z]{2,4}$");
+
+            if ((mail =='') || (!regex.test(mail)))
+            {
+                $('#errorMail').show();
+                $('#errorMail').addClass('error');
+            }
+            else
+            {
+                $('#errorMail').hide();
+            }
+        }
+
+
+        function verifMessage()
+        {
+            var message = $('#area').val();
+
+            if (message =='')
+            {
+                $('#errorMessage').show();
+                $('#errorMessage').addClass('error');
+            }
+            else
+            {
+                $('#errorMessage').hide();
+            }
+        }
+
+
+
+        $(window).scroll(function()  {
+            var sticky = $(window).scrollTop();
+            var top = $(window).scrollTop();
+
+            if (sticky >200) 
+            {
+                $('#header').addClass('fixed');
+                $('#logo').hide();
+                $('tampon').show();
+            }
+            else{
+                $('#header').removeClass('fixed');
+                $('#logo').show();
+                $('tampon').hide();
+            }
+
+            if(top > 300)
+            {
+                $('#return').show();
+            }
+            else{
+                $('#return').hide();
+            }
+        });
+
+
+
+    
+        function haut()
+        {
+            $('body').animate({
+                scrollTop: '0px'
+            },
+            1500);
+            return false;
+        }
+    </script>
+
+    
+</body>
+</html>
+<script>
